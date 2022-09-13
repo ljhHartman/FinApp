@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraGrid;
 using FinApp.entity;
+using FinApp.uc.importCSV.dsTransactionsTableAdapters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ namespace FinApp.uc.importCSV
     class mod_LoadCSVs
     {
 
-        public static BindingList<Transaction> CsvToGridControl(GridControl gc)
+        public static BindingList<Transaction> CsvToGridControl()
         {
             System.ComponentModel.BindingList<Transaction> bl = new System.ComponentModel.BindingList<Transaction>();
 
@@ -59,8 +60,30 @@ namespace FinApp.uc.importCSV
                 }
             }
 
-            //gc.DataSource = bl;
+            // Remove first row
+            bl.RemoveAt(0);
             return bl;
+        }
+
+        public static void BindlistToDatabase(BindingList<Transaction> bl)
+        { 
+        // Insert into Database
+        foreach (Transaction i in bl)
+        {
+            TransactionsTableAdapter obj = new TransactionsTableAdapter();
+            obj.InsertQuery(
+                i.date.Replace("\"", ""),
+                i.description.Replace("\"", ""),
+                i.account.Replace("\"", ""),
+                i.contraAccount.Replace("\"", ""),
+                i.code.Replace("\"", ""),
+                i.addSub.Replace("\"", ""),
+                i.account.Replace("\"", ""),
+                i.mutationType.Replace("\"", ""),
+                i.announcements.Replace("\"", ""),
+                i.newSaldo.Replace("\"", ""),
+                i.tag.Replace("\"", ""));
+            }
         }
 
 

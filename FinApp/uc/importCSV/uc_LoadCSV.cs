@@ -1,21 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
+using FinApp.entity;
 
 namespace FinApp.uc.importCSV
 {
     public partial class ucLoadCSV : UserControl
     {
+        BindingList<Transaction> bl = new BindingList<Transaction>();
+
         public ucLoadCSV()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void ucLoadCSV_Load(object sender, EventArgs e)
@@ -25,8 +21,18 @@ namespace FinApp.uc.importCSV
 
         private void btnImportCSV_Click(object sender, EventArgs e)
         {
-            gridControl1.DataSource = uc.importCSV.mod_LoadCSVs.CsvToGridControl(gridControl1);
+            bl = mod_LoadCSVs.CsvToGridControl();
+            gridControl1.DataSource = bl;
+        }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            mod_LoadCSVs.BindlistToDatabase(bl);
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "tag") + "");
         }
     }
 }

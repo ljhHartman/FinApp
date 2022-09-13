@@ -80,6 +80,11 @@
     <Compile Include="uc\dashboard\uc_Dashboard.Designer.cs">
       <DependentUpon>uc_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc\importCSV\ds_Transactions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_Transactions.xsd</DependentUpon>
+    </Compile>
     <Compile Include="uc\importCSV\mod_LoadCSV.cs" />
     <Compile Include="uc\importCSV\test_ImportCSV.cs" />
     <Compile Include="uc\importCSV\uc_LoadCSV.cs">
@@ -128,6 +133,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="uc\importCSV\ds_Transactions.xsc">
+      <DependentUpon>ds_Transactions.xsd</DependentUpon>
+    </None>
+    <None Include="uc\importCSV\ds_Transactions.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_Transactions.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="uc\importCSV\ds_Transactions.xss">
+      <DependentUpon>ds_Transactions.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

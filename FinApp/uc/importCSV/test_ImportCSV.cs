@@ -5,6 +5,8 @@ using System.Data;
 using System.IO;
 using DevExpress.XtraLayout.Filtering.Templates;
 using FinApp.entity;
+using FinApp.uc.importCSV;
+using FinApp.uc.importCSV.dsTransactionsTableAdapters;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace FinApp.uc.usercontrol
@@ -150,9 +152,83 @@ namespace FinApp.uc.usercontrol
                 }
             }
 
+
+        
+
         }
 
 
+
+        [TestMethod]
+        public void CsvToDatabase()
+        {
+            BindingList<Transaction> bl = new BindingList<Transaction>();
+
+            // Get csv data
+            using (var reader = new StreamReader(@"C:\Users\lucas.hartman\ING\NL46INGB0009272489_10-09-2022_10-09-2022.csv"))
+            {
+                List<string> listDate = new List<string>();
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    var values = line.Split(';');
+
+                    // Add to BindingList
+                    bl.Add(new Transaction()
+                    {
+                        date = values[0],
+                        description = values[1],
+                        account = values[2],
+                        contraAccount = values[3],
+                        code = values[4],
+                        addSub = values[5],
+                        amount = values[6],
+                        mutationType = values[7],
+                        announcements = values[8],
+                        newSaldo = values[9],
+                        tag = values[10],
+                    });
+                }
+
+                // Remove first row
+                bl.RemoveAt(0);
+
+                // Print BindingList
+                foreach (Transaction i in bl)
+                {
+                    Console.WriteLine(
+                        $"date={i.date},\n" +
+                        $"description={i.description},\n" +
+                        $"account={i.account},\n" +
+                        $"contraAcount={i.contraAccount},\n" +
+                        $"code={i.code},\n" +
+                        $"addSub={i.addSub},\n" +
+                        $"amount={i.amount},\n" +
+                        $"mutationType={i.mutationType},\n" +
+                        $"announcements={i.announcements},\n" +
+                        $"newSaldo={i.newSaldo},\n" +
+                        $"tag={i.tag}\n\n");
+                }
+
+                // Insert into Database
+                foreach (Transaction i in bl)
+                {
+                    TransactionsTableAdapter obj = new TransactionsTableAdapter();
+                    obj.InsertQuery(
+                        i.date.Replace("\"", ""), 
+                        i.description.Replace("\"", ""), 
+                        i.account.Replace("\"", ""), 
+                        i.contraAccount.Replace("\"", ""), 
+                        i.code.Replace("\"", ""), 
+                        i.addSub.Replace("\"", ""), 
+                        i.account.Replace("\"", ""), 
+                        i.mutationType.Replace("\"", ""), 
+                        i.announcements.Replace("\"", ""),
+                        i.newSaldo.Replace("\"", ""), 
+                        i.tag.Replace("\"", ""));
+                }
+            }
+        }
 
 
 
