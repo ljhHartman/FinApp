@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinApp.uc
 {
-    public partial class ucDashboard : UserControl
+    public partial class uc_LoadCSV : UserControl
     {
-        public ucDashboard()
+        public uc_LoadCSV()
         {
             InitializeComponent();
         }

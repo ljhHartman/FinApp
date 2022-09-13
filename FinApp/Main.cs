@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace FinApp
 {
     public partial class Main : Form
@@ -24,7 +25,7 @@ namespace FinApp
         void tabbedView1_QueryControl(object sender, DevExpress.XtraBars.Docking2010.Views.QueryControlEventArgs e)
         {
             if (e.Document == ucDashboardDocument)
-                e.Control = new FinApp.uc.ucDashboard();
+                e.Control = new FinApp.uc.uc_LoadCSV();
             if (e.Control == null)
                 e.Control = new System.Windows.Forms.Control();
         }
@@ -44,6 +45,15 @@ namespace FinApp
             uc.UserControl1 uc = new uc.UserControl1();
             pUserControl1.ControlContainer.Controls.Add(uc);
 
+        }
+
+        private void importCSVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Create a panel and dock it to the right. 
+            DockPanel pImportCSV = dockManager1.AddPanel(DockingStyle.Right);
+            pImportCSV.Text = "Import CSV";
+            uc.importCSV.ucLoadCSV uc = new uc.importCSV.ucLoadCSV();
+            pImportCSV.ControlContainer.Controls.Add(uc);
         }
     }
 }

@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.IO;
+using DevExpress.XtraLayout.Filtering.Templates;
+using FinApp.entity;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace FinApp.uc.usercontrol
@@ -36,8 +39,7 @@ namespace FinApp.uc.usercontrol
                 {
                     Console.WriteLine(i);
                 }
-
-                
+     
             }
         }
 
@@ -96,7 +98,64 @@ namespace FinApp.uc.usercontrol
                 Console.WriteLine($"{row[0]}, {row[1]}, {row[2]}, {row[3]}, {row[4]}, {row[5]}, {row[6]}, {row[7]}, {row[8]}, {row[9]}, {row[10]}");
             }
 
+            // Table to Dataset
+            DataSet ds = new DataSet();
+            ds.Tables.Add(tbl);
         }
+
+
+        [TestMethod]
+        public void CsvToBindlist()
+        {
+            // Get csv data
+            using (var reader = new StreamReader(@"C:\Users\lucas.hartman\ING\NL46INGB0009272489_10-09-2022_10-09-2022.csv"))
+            {
+                List<string> listDate = new List<string>();
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    var values = line.Split(';');
+
+                    // Add to BindingList
+                    BindingList<Transaction> bl = new BindingList<Transaction>();
+                    bl.Add(new Transaction()
+                    {
+                        date = values[0],
+                        description = values[1],
+                        account = values[2],
+                        contraAccount = values[3],
+                        code = values[4],
+                        addSub = values[5],
+                        amount = values[6],
+                        mutationType = values[7],
+                        newSaldo = values[8],
+                        tag = values[9],
+                    });
+
+                    // Print BindingList
+                    foreach (Transaction i in bl)
+                    {
+                        Console.WriteLine(
+                            $"date={i.date},\n" +
+                            $"description={i.description},\n" +
+                            $"account={i.account},\n" +
+                            $"contraAcount={i.contraAccount},\n" +
+                            $"code={i.code},\n" +
+                            $"addSub={i.addSub},\n" +
+                            $"amount={i.amount},\n" +
+                            $"mutationType={i.mutationType},\n" +
+                            $"newSaldo={i.newSaldo},\n" +
+                            $"tag={i.tag}\n\n");
+                    }
+                }
+            }
+
+        }
+
+
+
+
+
 
     }
 }

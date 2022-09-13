@@ -1,4 +1,4 @@
-﻿namespace FinApp.uc
+﻿namespace FinApp.uc.importCSV
 {
     partial class ucLoadCSV
     {
@@ -48,30 +48,34 @@
             this.tlpContainer.Controls.Add(this.gridControl1, 0, 1);
             this.tlpContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpContainer.Location = new System.Drawing.Point(0, 0);
+            this.tlpContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tlpContainer.Name = "tlpContainer";
             this.tlpContainer.RowCount = 3;
-            this.tlpContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tlpContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tlpContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tlpContainer.Size = new System.Drawing.Size(766, 430);
+            this.tlpContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tlpContainer.Size = new System.Drawing.Size(1021, 529);
             this.tlpContainer.TabIndex = 0;
             // 
             // btnImportCSV
             // 
             this.btnImportCSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImportCSV.Location = new System.Drawing.Point(3, 3);
+            this.btnImportCSV.Location = new System.Drawing.Point(4, 4);
+            this.btnImportCSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnImportCSV.Name = "btnImportCSV";
-            this.btnImportCSV.Size = new System.Drawing.Size(760, 23);
+            this.btnImportCSV.Size = new System.Drawing.Size(1013, 28);
             this.btnImportCSV.TabIndex = 0;
             this.btnImportCSV.Text = "Import CSV";
             this.btnImportCSV.UseVisualStyleBackColor = true;
+            this.btnImportCSV.Click += new System.EventHandler(this.btnImportCSV_Click);
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(3, 403);
+            this.btnSave.Location = new System.Drawing.Point(4, 496);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(760, 23);
+            this.btnSave.Size = new System.Drawing.Size(1013, 28);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -79,10 +83,12 @@
             // gridControl1
             // 
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(3, 33);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridControl1.Location = new System.Drawing.Point(4, 41);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(760, 364);
+            this.gridControl1.Size = new System.Drawing.Size(1013, 447);
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -94,11 +100,12 @@
             // 
             // ucLoadCSV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tlpContainer);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucLoadCSV";
-            this.Size = new System.Drawing.Size(766, 430);
+            this.Size = new System.Drawing.Size(1021, 529);
             this.Load += new System.EventHandler(this.ucLoadCSV_Load);
             this.tlpContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();

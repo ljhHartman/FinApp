@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
-namespace FinApp.uc
+namespace FinApp.uc.importCSV
 {
     public partial class ucLoadCSV : UserControl
     {
@@ -19,6 +20,12 @@ namespace FinApp.uc
 
         private void ucLoadCSV_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnImportCSV_Click(object sender, EventArgs e)
+        {
+            gridControl1.DataSource = uc.importCSV.mod_LoadCSVs.CsvToGridControl(gridControl1);
 
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace FinApp.uc
 {
-    partial class ucDashboard
+    partial class uc_LoadCSV
     {
         /// <summary> 
         /// Required designer variable.
