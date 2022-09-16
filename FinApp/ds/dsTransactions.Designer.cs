@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace FinApp.uc.importCSV {
+namespace FinApp.ds {
     
     
     /// <summary>
@@ -22,7 +22,7 @@ namespace FinApp.uc.importCSV {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("dsTransactions")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ds_Transactions : global::System.Data.DataSet {
+    public partial class dsTransactions : global::System.Data.DataSet {
         
         private TransactionsDataTable tableTransactions;
         
@@ -30,7 +30,7 @@ namespace FinApp.uc.importCSV {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public ds_Transactions() {
+        public dsTransactions() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace FinApp.uc.importCSV {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected ds_Transactions(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsTransactions(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace FinApp.uc.importCSV {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            ds_Transactions cln = ((ds_Transactions)(base.Clone()));
+            dsTransactions cln = ((dsTransactions)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -225,7 +225,7 @@ namespace FinApp.uc.importCSV {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ds_Transactions ds = new ds_Transactions();
+            dsTransactions ds = new dsTransactions();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -279,27 +279,29 @@ namespace FinApp.uc.importCSV {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class TransactionsDataTable : global::System.Data.TypedTableBase<TransactionsRow> {
             
-            private global::System.Data.DataColumn columndate;
+            private global::System.Data.DataColumn columnDATE;
             
-            private global::System.Data.DataColumn columndescription;
+            private global::System.Data.DataColumn columnNAME;
             
-            private global::System.Data.DataColumn columnaccount;
+            private global::System.Data.DataColumn columnACCOUNT;
             
-            private global::System.Data.DataColumn columncontraAccount;
+            private global::System.Data.DataColumn columnCONTRAACCOUNT;
             
-            private global::System.Data.DataColumn columncode;
+            private global::System.Data.DataColumn columnCODE;
             
-            private global::System.Data.DataColumn columnaddSub;
+            private global::System.Data.DataColumn columnADDSUB;
             
-            private global::System.Data.DataColumn columnamount;
+            private global::System.Data.DataColumn columnAMOUNT;
             
-            private global::System.Data.DataColumn columnmutationTypes;
+            private global::System.Data.DataColumn columnCURRENCY;
             
-            private global::System.Data.DataColumn columnannouncements;
+            private global::System.Data.DataColumn columnMUTATIONTYPE;
             
-            private global::System.Data.DataColumn columnnewSaldo;
+            private global::System.Data.DataColumn columnSTATEMENT;
             
-            private global::System.Data.DataColumn columntag;
+            private global::System.Data.DataColumn columnBALANCEAFTERCHANGE;
+            
+            private global::System.Data.DataColumn columnTAG;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -336,89 +338,97 @@ namespace FinApp.uc.importCSV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn dateColumn {
+            public global::System.Data.DataColumn DATEColumn {
                 get {
-                    return this.columndate;
+                    return this.columnDATE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn descriptionColumn {
+            public global::System.Data.DataColumn NAMEColumn {
                 get {
-                    return this.columndescription;
+                    return this.columnNAME;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn accountColumn {
+            public global::System.Data.DataColumn ACCOUNTColumn {
                 get {
-                    return this.columnaccount;
+                    return this.columnACCOUNT;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn contraAccountColumn {
+            public global::System.Data.DataColumn CONTRAACCOUNTColumn {
                 get {
-                    return this.columncontraAccount;
+                    return this.columnCONTRAACCOUNT;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn codeColumn {
+            public global::System.Data.DataColumn CODEColumn {
                 get {
-                    return this.columncode;
+                    return this.columnCODE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn addSubColumn {
+            public global::System.Data.DataColumn ADDSUBColumn {
                 get {
-                    return this.columnaddSub;
+                    return this.columnADDSUB;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn amountColumn {
+            public global::System.Data.DataColumn AMOUNTColumn {
                 get {
-                    return this.columnamount;
+                    return this.columnAMOUNT;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn mutationTypesColumn {
+            public global::System.Data.DataColumn CURRENCYColumn {
                 get {
-                    return this.columnmutationTypes;
+                    return this.columnCURRENCY;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn announcementsColumn {
+            public global::System.Data.DataColumn MUTATIONTYPEColumn {
                 get {
-                    return this.columnannouncements;
+                    return this.columnMUTATIONTYPE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn newSaldoColumn {
+            public global::System.Data.DataColumn STATEMENTColumn {
                 get {
-                    return this.columnnewSaldo;
+                    return this.columnSTATEMENT;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn tagColumn {
+            public global::System.Data.DataColumn BALANCEAFTERCHANGEColumn {
                 get {
-                    return this.columntag;
+                    return this.columnBALANCEAFTERCHANGE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn TAGColumn {
+                get {
+                    return this.columnTAG;
                 }
             }
             
@@ -459,20 +469,21 @@ namespace FinApp.uc.importCSV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TransactionsRow AddTransactionsRow(string date, string description, string account, string contraAccount, string code, string addSub, string amount, string mutationTypes, string announcements, string newSaldo, string tag) {
+            public TransactionsRow AddTransactionsRow(string DATE, string NAME, string ACCOUNT, string CONTRAACCOUNT, string CODE, string ADDSUB, decimal AMOUNT, string CURRENCY, string MUTATIONTYPE, string STATEMENT, decimal BALANCEAFTERCHANGE, string TAG) {
                 TransactionsRow rowTransactionsRow = ((TransactionsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        date,
-                        description,
-                        account,
-                        contraAccount,
-                        code,
-                        addSub,
-                        amount,
-                        mutationTypes,
-                        announcements,
-                        newSaldo,
-                        tag};
+                        DATE,
+                        NAME,
+                        ACCOUNT,
+                        CONTRAACCOUNT,
+                        CODE,
+                        ADDSUB,
+                        AMOUNT,
+                        CURRENCY,
+                        MUTATIONTYPE,
+                        STATEMENT,
+                        BALANCEAFTERCHANGE,
+                        TAG};
                 rowTransactionsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTransactionsRow);
                 return rowTransactionsRow;
@@ -495,55 +506,57 @@ namespace FinApp.uc.importCSV {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columndate = base.Columns["date"];
-                this.columndescription = base.Columns["description"];
-                this.columnaccount = base.Columns["account"];
-                this.columncontraAccount = base.Columns["contraAccount"];
-                this.columncode = base.Columns["code"];
-                this.columnaddSub = base.Columns["addSub"];
-                this.columnamount = base.Columns["amount"];
-                this.columnmutationTypes = base.Columns["mutationTypes"];
-                this.columnannouncements = base.Columns["announcements"];
-                this.columnnewSaldo = base.Columns["newSaldo"];
-                this.columntag = base.Columns["tag"];
+                this.columnDATE = base.Columns["DATE"];
+                this.columnNAME = base.Columns["NAME"];
+                this.columnACCOUNT = base.Columns["ACCOUNT"];
+                this.columnCONTRAACCOUNT = base.Columns["CONTRAACCOUNT"];
+                this.columnCODE = base.Columns["CODE"];
+                this.columnADDSUB = base.Columns["ADDSUB"];
+                this.columnAMOUNT = base.Columns["AMOUNT"];
+                this.columnCURRENCY = base.Columns["CURRENCY"];
+                this.columnMUTATIONTYPE = base.Columns["MUTATIONTYPE"];
+                this.columnSTATEMENT = base.Columns["STATEMENT"];
+                this.columnBALANCEAFTERCHANGE = base.Columns["BALANCEAFTERCHANGE"];
+                this.columnTAG = base.Columns["TAG"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columndate = new global::System.Data.DataColumn("date", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndate);
-                this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndescription);
-                this.columnaccount = new global::System.Data.DataColumn("account", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnaccount);
-                this.columncontraAccount = new global::System.Data.DataColumn("contraAccount", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncontraAccount);
-                this.columncode = new global::System.Data.DataColumn("code", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncode);
-                this.columnaddSub = new global::System.Data.DataColumn("addSub", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnaddSub);
-                this.columnamount = new global::System.Data.DataColumn("amount", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnamount);
-                this.columnmutationTypes = new global::System.Data.DataColumn("mutationTypes", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmutationTypes);
-                this.columnannouncements = new global::System.Data.DataColumn("announcements", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnannouncements);
-                this.columnnewSaldo = new global::System.Data.DataColumn("newSaldo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnewSaldo);
-                this.columntag = new global::System.Data.DataColumn("tag", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntag);
-                this.columndate.MaxLength = 10;
-                this.columndescription.MaxLength = 10;
-                this.columnaccount.MaxLength = 10;
-                this.columncontraAccount.MaxLength = 10;
-                this.columncode.MaxLength = 10;
-                this.columnaddSub.MaxLength = 10;
-                this.columnamount.MaxLength = 10;
-                this.columnmutationTypes.MaxLength = 10;
-                this.columnannouncements.MaxLength = 10;
-                this.columnnewSaldo.MaxLength = 10;
-                this.columntag.MaxLength = 10;
+                this.columnDATE = new global::System.Data.DataColumn("DATE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDATE);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
+                this.columnACCOUNT = new global::System.Data.DataColumn("ACCOUNT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnACCOUNT);
+                this.columnCONTRAACCOUNT = new global::System.Data.DataColumn("CONTRAACCOUNT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCONTRAACCOUNT);
+                this.columnCODE = new global::System.Data.DataColumn("CODE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCODE);
+                this.columnADDSUB = new global::System.Data.DataColumn("ADDSUB", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnADDSUB);
+                this.columnAMOUNT = new global::System.Data.DataColumn("AMOUNT", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAMOUNT);
+                this.columnCURRENCY = new global::System.Data.DataColumn("CURRENCY", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCURRENCY);
+                this.columnMUTATIONTYPE = new global::System.Data.DataColumn("MUTATIONTYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMUTATIONTYPE);
+                this.columnSTATEMENT = new global::System.Data.DataColumn("STATEMENT", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTATEMENT);
+                this.columnBALANCEAFTERCHANGE = new global::System.Data.DataColumn("BALANCEAFTERCHANGE", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBALANCEAFTERCHANGE);
+                this.columnTAG = new global::System.Data.DataColumn("TAG", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTAG);
+                this.columnDATE.MaxLength = 10;
+                this.columnNAME.MaxLength = 50;
+                this.columnACCOUNT.MaxLength = 30;
+                this.columnCONTRAACCOUNT.MaxLength = 30;
+                this.columnCODE.MaxLength = 10;
+                this.columnADDSUB.MaxLength = 10;
+                this.columnCURRENCY.MaxLength = 10;
+                this.columnMUTATIONTYPE.MaxLength = 30;
+                this.columnSTATEMENT.MaxLength = 50;
+                this.columnTAG.MaxLength = 30;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -611,7 +624,7 @@ namespace FinApp.uc.importCSV {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ds_Transactions ds = new ds_Transactions();
+                dsTransactions ds = new dsTransactions();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -686,310 +699,338 @@ namespace FinApp.uc.importCSV {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string date {
+            public string DATE {
                 get {
                     try {
-                        return ((string)(this[this.tableTransactions.dateColumn]));
+                        return ((string)(this[this.tableTransactions.DATEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'date\' in table \'Transactions\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DATE\' in table \'Transactions\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransactions.dateColumn] = value;
+                    this[this.tableTransactions.DATEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string description {
+            public string NAME {
                 get {
                     try {
-                        return ((string)(this[this.tableTransactions.descriptionColumn]));
+                        return ((string)(this[this.tableTransactions.NAMEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'description\' in table \'Transactions\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'NAME\' in table \'Transactions\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransactions.descriptionColumn] = value;
+                    this[this.tableTransactions.NAMEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string account {
+            public string ACCOUNT {
                 get {
                     try {
-                        return ((string)(this[this.tableTransactions.accountColumn]));
+                        return ((string)(this[this.tableTransactions.ACCOUNTColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'account\' in table \'Transactions\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ACCOUNT\' in table \'Transactions\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransactions.accountColumn] = value;
+                    this[this.tableTransactions.ACCOUNTColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string contraAccount {
+            public string CONTRAACCOUNT {
                 get {
                     try {
-                        return ((string)(this[this.tableTransactions.contraAccountColumn]));
+                        return ((string)(this[this.tableTransactions.CONTRAACCOUNTColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'contraAccount\' in table \'Transactions\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CONTRAACCOUNT\' in table \'Transactions\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransactions.contraAccountColumn] = value;
+                    this[this.tableTransactions.CONTRAACCOUNTColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string code {
+            public string CODE {
                 get {
                     try {
-                        return ((string)(this[this.tableTransactions.codeColumn]));
+                        return ((string)(this[this.tableTransactions.CODEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'code\' in table \'Transactions\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CODE\' in table \'Transactions\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransactions.codeColumn] = value;
+                    this[this.tableTransactions.CODEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string addSub {
+            public string ADDSUB {
                 get {
                     try {
-                        return ((string)(this[this.tableTransactions.addSubColumn]));
+                        return ((string)(this[this.tableTransactions.ADDSUBColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'addSub\' in table \'Transactions\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ADDSUB\' in table \'Transactions\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransactions.addSubColumn] = value;
+                    this[this.tableTransactions.ADDSUBColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string amount {
+            public decimal AMOUNT {
                 get {
                     try {
-                        return ((string)(this[this.tableTransactions.amountColumn]));
+                        return ((decimal)(this[this.tableTransactions.AMOUNTColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'amount\' in table \'Transactions\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'AMOUNT\' in table \'Transactions\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransactions.amountColumn] = value;
+                    this[this.tableTransactions.AMOUNTColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string mutationTypes {
+            public string CURRENCY {
                 get {
                     try {
-                        return ((string)(this[this.tableTransactions.mutationTypesColumn]));
+                        return ((string)(this[this.tableTransactions.CURRENCYColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'mutationTypes\' in table \'Transactions\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CURRENCY\' in table \'Transactions\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransactions.mutationTypesColumn] = value;
+                    this[this.tableTransactions.CURRENCYColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string announcements {
+            public string MUTATIONTYPE {
                 get {
                     try {
-                        return ((string)(this[this.tableTransactions.announcementsColumn]));
+                        return ((string)(this[this.tableTransactions.MUTATIONTYPEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'announcements\' in table \'Transactions\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'MUTATIONTYPE\' in table \'Transactions\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransactions.announcementsColumn] = value;
+                    this[this.tableTransactions.MUTATIONTYPEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string newSaldo {
+            public string STATEMENT {
                 get {
                     try {
-                        return ((string)(this[this.tableTransactions.newSaldoColumn]));
+                        return ((string)(this[this.tableTransactions.STATEMENTColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'newSaldo\' in table \'Transactions\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'STATEMENT\' in table \'Transactions\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransactions.newSaldoColumn] = value;
+                    this[this.tableTransactions.STATEMENTColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string tag {
+            public decimal BALANCEAFTERCHANGE {
                 get {
                     try {
-                        return ((string)(this[this.tableTransactions.tagColumn]));
+                        return ((decimal)(this[this.tableTransactions.BALANCEAFTERCHANGEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tag\' in table \'Transactions\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'BALANCEAFTERCHANGE\' in table \'Transactions\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTransactions.tagColumn] = value;
+                    this[this.tableTransactions.BALANCEAFTERCHANGEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsdateNull() {
-                return this.IsNull(this.tableTransactions.dateColumn);
+            public string TAG {
+                get {
+                    try {
+                        return ((string)(this[this.tableTransactions.TAGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TAG\' in table \'Transactions\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTransactions.TAGColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetdateNull() {
-                this[this.tableTransactions.dateColumn] = global::System.Convert.DBNull;
+            public bool IsDATENull() {
+                return this.IsNull(this.tableTransactions.DATEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsdescriptionNull() {
-                return this.IsNull(this.tableTransactions.descriptionColumn);
+            public void SetDATENull() {
+                this[this.tableTransactions.DATEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetdescriptionNull() {
-                this[this.tableTransactions.descriptionColumn] = global::System.Convert.DBNull;
+            public bool IsNAMENull() {
+                return this.IsNull(this.tableTransactions.NAMEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsaccountNull() {
-                return this.IsNull(this.tableTransactions.accountColumn);
+            public void SetNAMENull() {
+                this[this.tableTransactions.NAMEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetaccountNull() {
-                this[this.tableTransactions.accountColumn] = global::System.Convert.DBNull;
+            public bool IsACCOUNTNull() {
+                return this.IsNull(this.tableTransactions.ACCOUNTColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IscontraAccountNull() {
-                return this.IsNull(this.tableTransactions.contraAccountColumn);
+            public void SetACCOUNTNull() {
+                this[this.tableTransactions.ACCOUNTColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetcontraAccountNull() {
-                this[this.tableTransactions.contraAccountColumn] = global::System.Convert.DBNull;
+            public bool IsCONTRAACCOUNTNull() {
+                return this.IsNull(this.tableTransactions.CONTRAACCOUNTColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IscodeNull() {
-                return this.IsNull(this.tableTransactions.codeColumn);
+            public void SetCONTRAACCOUNTNull() {
+                this[this.tableTransactions.CONTRAACCOUNTColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetcodeNull() {
-                this[this.tableTransactions.codeColumn] = global::System.Convert.DBNull;
+            public bool IsCODENull() {
+                return this.IsNull(this.tableTransactions.CODEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsaddSubNull() {
-                return this.IsNull(this.tableTransactions.addSubColumn);
+            public void SetCODENull() {
+                this[this.tableTransactions.CODEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetaddSubNull() {
-                this[this.tableTransactions.addSubColumn] = global::System.Convert.DBNull;
+            public bool IsADDSUBNull() {
+                return this.IsNull(this.tableTransactions.ADDSUBColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsamountNull() {
-                return this.IsNull(this.tableTransactions.amountColumn);
+            public void SetADDSUBNull() {
+                this[this.tableTransactions.ADDSUBColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetamountNull() {
-                this[this.tableTransactions.amountColumn] = global::System.Convert.DBNull;
+            public bool IsAMOUNTNull() {
+                return this.IsNull(this.tableTransactions.AMOUNTColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsmutationTypesNull() {
-                return this.IsNull(this.tableTransactions.mutationTypesColumn);
+            public void SetAMOUNTNull() {
+                this[this.tableTransactions.AMOUNTColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetmutationTypesNull() {
-                this[this.tableTransactions.mutationTypesColumn] = global::System.Convert.DBNull;
+            public bool IsCURRENCYNull() {
+                return this.IsNull(this.tableTransactions.CURRENCYColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsannouncementsNull() {
-                return this.IsNull(this.tableTransactions.announcementsColumn);
+            public void SetCURRENCYNull() {
+                this[this.tableTransactions.CURRENCYColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetannouncementsNull() {
-                this[this.tableTransactions.announcementsColumn] = global::System.Convert.DBNull;
+            public bool IsMUTATIONTYPENull() {
+                return this.IsNull(this.tableTransactions.MUTATIONTYPEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsnewSaldoNull() {
-                return this.IsNull(this.tableTransactions.newSaldoColumn);
+            public void SetMUTATIONTYPENull() {
+                this[this.tableTransactions.MUTATIONTYPEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetnewSaldoNull() {
-                this[this.tableTransactions.newSaldoColumn] = global::System.Convert.DBNull;
+            public bool IsSTATEMENTNull() {
+                return this.IsNull(this.tableTransactions.STATEMENTColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IstagNull() {
-                return this.IsNull(this.tableTransactions.tagColumn);
+            public void SetSTATEMENTNull() {
+                this[this.tableTransactions.STATEMENTColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SettagNull() {
-                this[this.tableTransactions.tagColumn] = global::System.Convert.DBNull;
+            public bool IsBALANCEAFTERCHANGENull() {
+                return this.IsNull(this.tableTransactions.BALANCEAFTERCHANGEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetBALANCEAFTERCHANGENull() {
+                this[this.tableTransactions.BALANCEAFTERCHANGEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsTAGNull() {
+                return this.IsNull(this.tableTransactions.TAGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetTAGNull() {
+                this[this.tableTransactions.TAGColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1028,7 +1069,7 @@ namespace FinApp.uc.importCSV {
         }
     }
 }
-namespace FinApp.uc.importCSV.dsTransactionsTableAdapters {
+namespace FinApp.ds.dsTransactionsTableAdapters {
     
     
     /// <summary>
@@ -1152,33 +1193,35 @@ namespace FinApp.uc.importCSV.dsTransactionsTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Transactions";
-            tableMapping.ColumnMappings.Add("date", "date");
-            tableMapping.ColumnMappings.Add("description", "description");
-            tableMapping.ColumnMappings.Add("account", "account");
-            tableMapping.ColumnMappings.Add("contraAccount", "contraAccount");
-            tableMapping.ColumnMappings.Add("code", "code");
-            tableMapping.ColumnMappings.Add("addSub", "addSub");
-            tableMapping.ColumnMappings.Add("amount", "amount");
-            tableMapping.ColumnMappings.Add("mutationTypes", "mutationTypes");
-            tableMapping.ColumnMappings.Add("announcements", "announcements");
-            tableMapping.ColumnMappings.Add("newSaldo", "newSaldo");
-            tableMapping.ColumnMappings.Add("tag", "tag");
+            tableMapping.ColumnMappings.Add("DATE", "DATE");
+            tableMapping.ColumnMappings.Add("NAME", "NAME");
+            tableMapping.ColumnMappings.Add("ACCOUNT", "ACCOUNT");
+            tableMapping.ColumnMappings.Add("CONTRAACCOUNT", "CONTRAACCOUNT");
+            tableMapping.ColumnMappings.Add("CODE", "CODE");
+            tableMapping.ColumnMappings.Add("ADDSUB", "ADDSUB");
+            tableMapping.ColumnMappings.Add("AMOUNT", "AMOUNT");
+            tableMapping.ColumnMappings.Add("CURRENCY", "CURRENCY");
+            tableMapping.ColumnMappings.Add("MUTATIONTYPE", "MUTATIONTYPE");
+            tableMapping.ColumnMappings.Add("STATEMENT", "STATEMENT");
+            tableMapping.ColumnMappings.Add("BALANCEAFTERCHANGE", "BALANCEAFTERCHANGE");
+            tableMapping.ColumnMappings.Add("TAG", "TAG");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Transactions] ([date], [description], [account], [contraAccount], [code], [addSub], [amount], [mutationTypes], [announcements], [newSaldo], [tag]) VALUES (@date, @description, @account, @contraAccount, @code, @addSub, @amount, @mutationTypes, @announcements, @newSaldo, @tag)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Transactions] ([DATE], [NAME], [ACCOUNT], [CONTRAACCOUNT], [CODE], [ADDSUB], [AMOUNT], [CURRENCY], [MUTATIONTYPE], [STATEMENT], [BALANCEAFTERCHANGE], [TAG]) VALUES (@DATE, @NAME, @ACCOUNT, @CONTRAACCOUNT, @CODE, @ADDSUB, @AMOUNT, @CURRENCY, @MUTATIONTYPE, @STATEMENT, @BALANCEAFTERCHANGE, @TAG)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@account", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "account", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@contraAccount", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contraAccount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@code", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@addSub", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "addSub", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@amount", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "amount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mutationTypes", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mutationTypes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcements", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "announcements", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@newSaldo", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "newSaldo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tag", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tag", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATE", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NAME", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ACCOUNT", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CONTRAACCOUNT", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CONTRAACCOUNT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODE", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CODE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ADDSUB", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ADDSUB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AMOUNT", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "AMOUNT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CURRENCY", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CURRENCY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MUTATIONTYPE", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MUTATIONTYPE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STATEMENT", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "STATEMENT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BALANCEAFTERCHANGE", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "BALANCEAFTERCHANGE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TAG", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TAG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1194,31 +1237,32 @@ namespace FinApp.uc.importCSV.dsTransactionsTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT date, description, account, contraAccount, code, addSub, amount, mutationT" +
-                "ypes, announcements, newSaldo, tag \r\nFROM dbo.Transactions";
+            this._commandCollection[0].CommandText = "SELECT DATE, NAME, ACCOUNT, CONTRAACCOUNT, CODE, ADDSUB, AMOUNT, CURRENCY, MUTATI" +
+                "ONTYPE, STATEMENT, BALANCEAFTERCHANGE, TAG FROM dbo.Transactions";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"INSERT INTO [dbo].[Transactions] ([date], [description], [account], [contraAccount], [code], [addSub], [amount], [mutationTypes], [announcements], [newSaldo], [tag]) VALUES (@date, @description, @account, @contraAccount, @code, @addSub, @amount, @mutationTypes, @announcements, @newSaldo, @tag)";
+            this._commandCollection[1].CommandText = @"INSERT INTO [dbo].[Transactions] ([DATE], [NAME], [ACCOUNT], [CONTRAACCOUNT], [CODE], [ADDSUB], [AMOUNT], [CURRENCY], [MUTATIONTYPE], [STATEMENT], [BALANCEAFTERCHANGE], [TAG]) VALUES (@DATE, @NAME, @ACCOUNT, @CONTRAACCOUNT, @CODE, @ADDSUB, @AMOUNT, @CURRENCY, @MUTATIONTYPE, @STATEMENT, @BALANCEAFTERCHANGE, @TAG)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@description", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@account", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "account", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@contraAccount", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "contraAccount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@code", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@addSub", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "addSub", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@amount", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "amount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mutationTypes", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "mutationTypes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@announcements", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "announcements", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@newSaldo", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "newSaldo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tag", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "tag", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATE", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "DATE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NAME", global::System.Data.SqlDbType.NChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ACCOUNT", global::System.Data.SqlDbType.NChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "ACCOUNT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CONTRAACCOUNT", global::System.Data.SqlDbType.NChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "CONTRAACCOUNT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CODE", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "CODE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ADDSUB", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "ADDSUB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AMOUNT", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 2, "AMOUNT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CURRENCY", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "CURRENCY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MUTATIONTYPE", global::System.Data.SqlDbType.NChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "MUTATIONTYPE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STATEMENT", global::System.Data.SqlDbType.NChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "STATEMENT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BALANCEAFTERCHANGE", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 2, "BALANCEAFTERCHANGE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TAG", global::System.Data.SqlDbType.NChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "TAG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ds_Transactions.TransactionsDataTable dataTable) {
+        public virtual int Fill(dsTransactions.TransactionsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1231,9 +1275,9 @@ namespace FinApp.uc.importCSV.dsTransactionsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ds_Transactions.TransactionsDataTable GetData() {
+        public virtual dsTransactions.TransactionsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ds_Transactions.TransactionsDataTable dataTable = new ds_Transactions.TransactionsDataTable();
+            dsTransactions.TransactionsDataTable dataTable = new dsTransactions.TransactionsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1241,14 +1285,14 @@ namespace FinApp.uc.importCSV.dsTransactionsTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ds_Transactions.TransactionsDataTable dataTable) {
+        public virtual int Update(dsTransactions.TransactionsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ds_Transactions dataSet) {
+        public virtual int Update(dsTransactions dataSet) {
             return this.Adapter.Update(dataSet, "Transactions");
         }
         
@@ -1271,72 +1315,78 @@ namespace FinApp.uc.importCSV.dsTransactionsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string date, string description, string account, string contraAccount, string code, string addSub, string amount, string mutationTypes, string announcements, string newSaldo, string tag) {
-            if ((date == null)) {
+        public virtual int Insert(string DATE, string NAME, string ACCOUNT, string CONTRAACCOUNT, string CODE, string ADDSUB, global::System.Nullable<decimal> AMOUNT, string CURRENCY, string MUTATIONTYPE, string STATEMENT, global::System.Nullable<decimal> BALANCEAFTERCHANGE, string TAG) {
+            if ((DATE == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(date));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(DATE));
             }
-            if ((description == null)) {
+            if ((NAME == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(description));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(NAME));
             }
-            if ((account == null)) {
+            if ((ACCOUNT == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(account));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(ACCOUNT));
             }
-            if ((contraAccount == null)) {
+            if ((CONTRAACCOUNT == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(contraAccount));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(CONTRAACCOUNT));
             }
-            if ((code == null)) {
+            if ((CODE == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(code));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(CODE));
             }
-            if ((addSub == null)) {
+            if ((ADDSUB == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(addSub));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(ADDSUB));
             }
-            if ((amount == null)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            if ((AMOUNT.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(AMOUNT.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(amount));
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((mutationTypes == null)) {
+            if ((CURRENCY == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(mutationTypes));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(CURRENCY));
             }
-            if ((announcements == null)) {
+            if ((MUTATIONTYPE == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(announcements));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(MUTATIONTYPE));
             }
-            if ((newSaldo == null)) {
+            if ((STATEMENT == null)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(newSaldo));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(STATEMENT));
             }
-            if ((tag == null)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            if ((BALANCEAFTERCHANGE.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((decimal)(BALANCEAFTERCHANGE.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(tag));
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((TAG == null)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(TAG));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1358,73 +1408,79 @@ namespace FinApp.uc.importCSV.dsTransactionsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertQuery(string date, string description, string account, string contraAccount, string code, string addSub, string amount, string mutationTypes, string announcements, string newSaldo, string tag) {
+        public virtual int InsertQuery(string DATE, string NAME, string ACCOUNT, string CONTRAACCOUNT, string CODE, string ADDSUB, global::System.Nullable<decimal> AMOUNT, string CURRENCY, string MUTATIONTYPE, string STATEMENT, global::System.Nullable<decimal> BALANCEAFTERCHANGE, string TAG) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            if ((date == null)) {
+            if ((DATE == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[0].Value = ((string)(date));
+                command.Parameters[0].Value = ((string)(DATE));
             }
-            if ((description == null)) {
+            if ((NAME == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[1].Value = ((string)(description));
+                command.Parameters[1].Value = ((string)(NAME));
             }
-            if ((account == null)) {
+            if ((ACCOUNT == null)) {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[2].Value = ((string)(account));
+                command.Parameters[2].Value = ((string)(ACCOUNT));
             }
-            if ((contraAccount == null)) {
+            if ((CONTRAACCOUNT == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[3].Value = ((string)(contraAccount));
+                command.Parameters[3].Value = ((string)(CONTRAACCOUNT));
             }
-            if ((code == null)) {
+            if ((CODE == null)) {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[4].Value = ((string)(code));
+                command.Parameters[4].Value = ((string)(CODE));
             }
-            if ((addSub == null)) {
+            if ((ADDSUB == null)) {
                 command.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[5].Value = ((string)(addSub));
+                command.Parameters[5].Value = ((string)(ADDSUB));
             }
-            if ((amount == null)) {
-                command.Parameters[6].Value = global::System.DBNull.Value;
+            if ((AMOUNT.HasValue == true)) {
+                command.Parameters[6].Value = ((decimal)(AMOUNT.Value));
             }
             else {
-                command.Parameters[6].Value = ((string)(amount));
+                command.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((mutationTypes == null)) {
+            if ((CURRENCY == null)) {
                 command.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[7].Value = ((string)(mutationTypes));
+                command.Parameters[7].Value = ((string)(CURRENCY));
             }
-            if ((announcements == null)) {
+            if ((MUTATIONTYPE == null)) {
                 command.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[8].Value = ((string)(announcements));
+                command.Parameters[8].Value = ((string)(MUTATIONTYPE));
             }
-            if ((newSaldo == null)) {
+            if ((STATEMENT == null)) {
                 command.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[9].Value = ((string)(newSaldo));
+                command.Parameters[9].Value = ((string)(STATEMENT));
             }
-            if ((tag == null)) {
-                command.Parameters[10].Value = global::System.DBNull.Value;
+            if ((BALANCEAFTERCHANGE.HasValue == true)) {
+                command.Parameters[10].Value = ((decimal)(BALANCEAFTERCHANGE.Value));
             }
             else {
-                command.Parameters[10].Value = ((string)(tag));
+                command.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((TAG == null)) {
+                command.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[11].Value = ((string)(TAG));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1535,7 +1591,7 @@ namespace FinApp.uc.importCSV.dsTransactionsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(ds_Transactions dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dsTransactions dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._transactionsTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Transactions.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1554,7 +1610,7 @@ namespace FinApp.uc.importCSV.dsTransactionsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(ds_Transactions dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dsTransactions dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._transactionsTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Transactions.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1572,7 +1628,7 @@ namespace FinApp.uc.importCSV.dsTransactionsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(ds_Transactions dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dsTransactions dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._transactionsTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Transactions.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1614,7 +1670,7 @@ namespace FinApp.uc.importCSV.dsTransactionsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(ds_Transactions dataSet) {
+        public virtual int UpdateAll(dsTransactions dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

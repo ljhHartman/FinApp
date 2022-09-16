@@ -39,8 +39,9 @@
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userControl1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.importCSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.allTransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ucDashboardDocument)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
@@ -108,7 +109,8 @@
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.userControl1ToolStripMenuItem,
-            this.importCSVToolStripMenuItem});
+            this.importCSVToolStripMenuItem,
+            this.allTransactionsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.viewToolStripMenuItem.Text = "View";
@@ -119,6 +121,13 @@
             this.userControl1ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.userControl1ToolStripMenuItem.Text = "UserControl1";
             this.userControl1ToolStripMenuItem.Click += new System.EventHandler(this.userControl1ToolStripMenuItem_Click);
+            // 
+            // importCSVToolStripMenuItem
+            // 
+            this.importCSVToolStripMenuItem.Name = "importCSVToolStripMenuItem";
+            this.importCSVToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.importCSVToolStripMenuItem.Text = "Import CSV";
+            this.importCSVToolStripMenuItem.Click += new System.EventHandler(this.importCSVToolStripMenuItem_Click);
             // 
             // dockManager1
             // 
@@ -135,12 +144,12 @@
             "DevExpress.XtraBars.Navigation.TileNavPane",
             "DevExpress.XtraBars.TabFormControl"});
             // 
-            // importCSVToolStripMenuItem
+            // allTransactionsToolStripMenuItem
             // 
-            this.importCSVToolStripMenuItem.Name = "importCSVToolStripMenuItem";
-            this.importCSVToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.importCSVToolStripMenuItem.Text = "Import CSV";
-            this.importCSVToolStripMenuItem.Click += new System.EventHandler(this.importCSVToolStripMenuItem_Click);
+            this.allTransactionsToolStripMenuItem.Name = "allTransactionsToolStripMenuItem";
+            this.allTransactionsToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.allTransactionsToolStripMenuItem.Text = "All Transactions";
+            this.allTransactionsToolStripMenuItem.Click += new System.EventHandler(this.allTransactionsToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -178,5 +187,6 @@
         private DevExpress.XtraBars.Docking.DockManager dockManager1;
         private System.Windows.Forms.ToolStripMenuItem userControl1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importCSVToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem allTransactionsToolStripMenuItem;
     }
 }

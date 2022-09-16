@@ -1,4 +1,6 @@
-DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraBars.BarManager, DevExpress.XtraBars.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraCharts.ChartControl, DevExpress.XtraCharts.v16.2.UI, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraBars.Docking2010.DocumentManager, DevExpress.XtraBars.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraEditors.PopupGalleryEdit, DevExpress.XtraBars.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraGrid.GridControl, DevExpress.XtraGrid.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.XtraBars.Docking.DockManager, DevExpress.XtraBars.v16.2, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a

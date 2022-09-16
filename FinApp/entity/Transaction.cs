@@ -9,16 +9,31 @@ namespace FinApp.entity
 
     public class Transaction
     {
-        public string date { get; set; }
-        public string description { get; set; }
-        public string account { get; set; }
-        public string contraAccount { get; set; }
-        public string code { get; set; }
-        public string addSub { get; set; }
-        public string amount { get; set; }
-        public string mutationType { get; set; }
-        public string announcements { get; set; }
-        public string newSaldo { get; set; }
-        public string tag { get; set; }
+        /*
+         DATE
+         NAME
+         ACCOUNT
+         CONTRAACCOUNT
+         CODE
+         ADDSUB
+         AMOUNT
+         CURRENCY
+         MUTATIONTYPE
+         STATEMENT
+         BALANCEAFTERCHANGE
+         TAG
+         */
+        public string DATE { get; set; }
+        public string NAME { get; set; }
+        public string ACCOUNT { get; set; }
+        public string CONTRAACCOUNT { get; set; }
+        public string CODE { get; set; }
+        public string ADDSUB { get; set; }
+        public double AMOUNT { get; set; }
+        public string CURRENCY { get; set; }
+        public string MUTATIONTYPE { get; set; }
+        public string STATEMENT { get; set; }
+        public double BALANCEAFTERCHANGE { get; set; }
+        public string TAG { get; set; }
     }
 }

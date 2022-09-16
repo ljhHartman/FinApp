@@ -55,5 +55,14 @@ namespace FinApp
             uc.importCSV.ucLoadCSV uc = new uc.importCSV.ucLoadCSV();
             pImportCSV.ControlContainer.Controls.Add(uc);
         }
+
+        private void allTransactionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Create a panel and dock it to the right. 
+            DockPanel pAllTransaction = dockManager1.AddPanel(DockingStyle.Right);
+            pAllTransaction.Text = "All Transactions";
+            uc.chartAllTransactions.uc_AllTransactions uc = new uc.chartAllTransactions.uc_AllTransactions();
+            pAllTransaction.ControlContainer.Controls.Add(uc);
+        }
     }
 }
