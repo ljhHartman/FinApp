@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace FinApp {
+namespace FinApp.ds {
     
     
     /// <summary>
@@ -640,7 +640,7 @@ namespace FinApp {
         }
     }
 }
-namespace FinApp.DataSet1TableAdapters {
+namespace FinApp.ds.DataSet1TableAdapters {
     
     
     /// <summary>

@@ -37,12 +37,13 @@
             this.tlpChart = new System.Windows.Forms.TableLayoutPanel();
             this.rcTimeLine = new DevExpress.XtraEditors.RangeControl();
             this.ccAllTransactions = new DevExpress.XtraCharts.ChartControl();
+            this.transactionsTableAdapter = new FinApp.DataSet1TableAdapters.TransactionsTableAdapter();
+            this.transactionsDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gcAllTransactions = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.dsTransactionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new FinApp.DataSet1();
             this.transactionsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.transactionsTableAdapter = new FinApp.DataSet1TableAdapters.TransactionsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.transactionsBindingSource)).BeginInit();
             this.tlpContainer.SuspendLayout();
             this.tlpChart.SuspendLayout();
@@ -51,6 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(swiftPlotDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(swiftPlotSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionsDataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcAllTransactions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsTransactionsBindingSource)).BeginInit();
@@ -110,7 +112,7 @@
             // 
             this.ccAllTransactions.DataAdapter = this.transactionsTableAdapter;
             this.ccAllTransactions.DataBindings = null;
-            this.ccAllTransactions.DataSource = this.transactionsBindingSource1;
+            this.ccAllTransactions.DataSource = this.transactionsDataTableBindingSource;
             swiftPlotDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             swiftPlotDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.ccAllTransactions.Diagram = swiftPlotDiagram1;
@@ -128,6 +130,14 @@
         series1};
             this.ccAllTransactions.Size = new System.Drawing.Size(876, 283);
             this.ccAllTransactions.TabIndex = 2;
+            // 
+            // transactionsTableAdapter
+            // 
+            this.transactionsTableAdapter.ClearBeforeFill = true;
+            // 
+            // transactionsDataTableBindingSource
+            // 
+            this.transactionsDataTableBindingSource.DataSource = typeof(FinApp.DataSet1.TransactionsDataTable);
             // 
             // gcAllTransactions
             // 
@@ -154,11 +164,6 @@
             // 
             this.transactionsBindingSource1.DataMember = "Transactions";
             this.transactionsBindingSource1.DataSource = this.dataSet1;
-            this.transactionsBindingSource1.Position = 0;
-            // 
-            // transactionsTableAdapter
-            // 
-            this.transactionsTableAdapter.ClearBeforeFill = true;
             // 
             // uc_AllTransactions
             // 
@@ -175,6 +180,7 @@
             ((System.ComponentModel.ISupportInitialize)(swiftPlotSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ccAllTransactions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionsDataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcAllTransactions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsTransactionsBindingSource)).EndInit();
@@ -197,5 +203,6 @@
         private DataSet1TableAdapters.TransactionsTableAdapter transactionsTableAdapter;
         private System.Windows.Forms.BindingSource transactionsBindingSource1;
         private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource transactionsDataTableBindingSource;
     }
 }
